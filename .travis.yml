@@ -9,3 +9,5 @@ before_install:
 after_success:
   - gox -output "dist/{{.OS}}_{{.Arch}}_{{.Dir}}"
   - ghr --username $GITHUB_USERNAME --token $GITHUB_TOKEN --replace --prerelease --debug pre-release dist/
+
+
